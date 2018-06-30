@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    // объявляем перменные
+    // элементы которыми будем манипулировать
     private ConstraintLayout myConstraintLayout;
     private TextView myDescription;
 
@@ -18,12 +20,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        // находим элементы по id
         myConstraintLayout = (ConstraintLayout) findViewById(R.id.constraintLayout);
         myDescription = (TextView) findViewById(R.id.description);
 
     }
 
+    // методы которые вызываем по нажатии на кнопки
+    // вызов методов по клику определяем в ресурсах
     public void onRedButtonClick(View view) {
         myDescription.setText(R.string.red);
         myConstraintLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.redColor));
